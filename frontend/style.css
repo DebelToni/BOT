@@ -1,0 +1,220 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  background-image: url('https://www.transparenttextures.com/patterns/food.png');
+  /* background-image: url('path/to/your/local/image.png'); */
+  background-repeat: repeat;
+  color: #333;
+}
+
+/* Navigation Bar */
+#nav {
+  background-color: #ff6347; /* Tomato color */
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+#nav a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#nav a:hover {
+  background-color: #ff4500; /* OrangeRed color */
+  color: #fff;
+}
+
+#nav a.active {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 2.5em;
+  color: #ff6347;
+}
+
+/* Main Content Container */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* Forms */
+form {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form input[type="file"] {
+  margin-top: 10px;
+}
+
+form button {
+  padding: 12px 20px;
+  width: 100%;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+form button:hover {
+  background-color: #ff4500;
+}
+
+/* Messages */
+#message {
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+}
+
+/* Recipe Cards */
+.recipe-card {
+  background-color: #fff;
+  width: 100%;
+  margin: 20px 0;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card h2 {
+  margin-top: 0;
+  color: #ff6347;
+}
+
+.recipe-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.recipe-card .author {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.recipe-card .average-rating {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.recipe-card .section-title {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #ff6347;
+}
+
+.recipe-card p,
+.recipe-card ul {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.recipe-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.recipe-card .rating-form {
+  margin-top: 20px;
+}
+
+.recipe-card .rating-form label {
+  margin-right: 10px;
+}
+
+.recipe-card .rating-form select {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.recipe-card .rating-form button {
+  padding: 8px 12px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.recipe-card .rating-form button:hover {
+  background-color: #ff4500;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  form {
+    margin: 20px;
+  }
+
+  .recipe-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,27 @@
+# Node dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+*.env
+
+# Database data
+db-data/
+
+# Docker containers
+*.pid
+*.sock
+
+# Uploads (if you don't want to include uploaded images)
+backend/uploads/
+
+# MacOS files
+.DS_Store
+
+# Miscellaneous
+*.swp

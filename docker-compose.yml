@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: nginx:latest
+    container_name: frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+      - ./frontend/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+      - DB_USER=anton.i.hristov.2021@elsys-bg.org
+      - DB_PASSWORD=g**JFGAv9wDkF63
+      - DB_NAME=bananc
+    volumes:
+      - ./backend/uploads:/usr/src/app/uploads
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: postgres:17
+    container_name: db
+    environment:
+      - POSTGRES_USER=anton.i.hristov.2021@elsys-bg.org
+      - POSTGRES_PASSWORD=g**JFGAv9wDkF63
+      - POSTGRES_DB=bananc
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:

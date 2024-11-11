@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Recipe - Recipe App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Upload Recipe</h1>
+  <div id="nav">
+    <a href="index.html">Home</a> |
+    <a href="#" id="logoutButton">Logout</a>
+  </div>
+  <form id="recipeForm" enctype="multipart/form-data">
+    <label>Title:</label><br>
+    <input type="text" name="title" required><br><br>
+    <label>Products (separate with commas):</label><br>
+    <textarea name="products" required></textarea><br><br>
+    <label>Steps:</label><br>
+    <textarea name="steps" required></textarea><br><br>
+    <label>Image:</label><br>
+    <input type="file" name="image"><br><br>
+    <button type="submit">Upload Recipe</button>
+  </form>
+  <div id="message"></div>
+  <script src="scripts.js"></script>
+</body>
+</html>
